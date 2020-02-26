@@ -6,7 +6,9 @@ export class Triangle {
 	}
 
 	checkType() {
-		if (
+		if (isNaN(this.side1) || isNaN(this.side2) || isNaN(this.side3)) {
+			return 'not a number';
+		} else if (
 			this.side1 > this.side2 + this.side3 ||
 			this.side2 > this.side1 + this.side3 ||
 			this.side3 > this.side1 + this.side2

@@ -31,4 +31,8 @@ describe('Triangle', () => {
 		var equilTriangle = new Triangle(3, 3, 3);
 		expect(equilTriangle.checkType()).toEqual('equilateral triangle');
 	});
+	test('should correctly determine whether three lengths make an equilateral triangle', function() {
+		var stringTriangle = new Triangle('test', 'hello', '3');
+		expect(stringTriangle.checkType()).toEqual('not a number');
+	});
 });
