@@ -6,20 +6,6 @@ export class Triangle {
 	}
 
 	checkType() {
-		if (
-			this.side1 > this.side2 + this.side3 ||
-			this.side2 > this.side1 + this.side3 ||
-			this.side3 > this.side1 + this.side2
-		) {
-			return 'not a triangle';
-		} else if (this.side1 === this.side2 && this.side2 === this.side3) {
-			return 'it is an equilateral triangle';
-		} else if (this.side1 === this.side2 || this.side1 === this.side3 || this.side2 === this.side3) {
-			return 'it is an isosceles triangle';
-		} else if (this.side1 !== this.side2 && this.side1 !== this.side3 && this.side2 !== this.side3) {
-			return 'it is a scalene triangle';
-		} else {
-			return 'unknown error';
-		}
+		return 'not a triangle';
 	}
 }
