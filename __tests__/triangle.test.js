@@ -21,6 +21,6 @@ describe('Triangle', () => {
 	});
 	test('should correctly determine whether three lengths make an equilateral triangle', function() {
 		var equilTriangle = new Triangle(3, 3, 3);
-		expect(equilTriangle.checkType()).toEqual('isosceles triangle');
+		expect(equilTriangle.checkType()).toEqual('equilateral triangle');
 	});
 });
