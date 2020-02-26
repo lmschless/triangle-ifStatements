@@ -19,7 +19,7 @@ export class Triangle {
 		} else if (this.side1 !== this.side2 && this.side1 !== this.side3 && this.side2 !== this.side3) {
 			return 'it is a scalene triangle';
 		} else {
-			return 'whatt';
+			return 'unknown error';
 		}
 	}
 }
