@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script
-    src="https://code.jquery.com/jquery-1.12.0.js"
-    integrity="sha256-yFU3rK1y8NfUCd/B4tLapZAy9x0pZCqLZLmFL3AWb7s="
-    crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <title>A fantastical adventure</title>
+    <title>Triangle Tracker</title>
   </head>
   <body>
-        <div class="container">
-                <h1>Enter 3 sides of triangles</h1>
-                <div>
-                  <form id="formOne">
-                    <div class="form-group">
-                      <label for="firstSide">Side-1</label>
-                      <input required id="sideOne" class="form-control" type="number">
-                    </div>
-                    <div class="form-group">
-                      <label  for="secondSide">Side-2</label>
-                      <input required id="sideTwo" class="form-control" type="number">
-                    </div>
-                    <div class="form-group">
-                      <label  for="thirdSide">Side-3</label>
-                      <input required id="sideThree" class="form-control" type="number">
-                    </div>
-          
-                    <button type="submit" class="btn-primary">Submit</button>
-                  </form>
-
-    </body>
-    </html>
-
-
-    
+    <div class="container">
+      <form class="input-form">
+        <label for="input-side1">First side:</label>
+        <input type="text" id="input-side1">
+        <br>
+        <label for="input-side2">Second side:</label>
+        <input type="text" id="input-side2">
+        <br>
+        <label for="input-side3">Third side:</label>
+        <input type="text" id="input-side3">
+        <br>
+        <button type="submit" class="btn btn-info" id="submit">What is the
+          triangle!?!?!?</button>
+      </form>
+      <div id="display-output">
+        <!-- output here -->
+      </div>
+    </div>
+  </body>
+</html>

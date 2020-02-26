@@ -1,30 +1,23 @@
-$(document).ready(function() {
-	$('#formOne').submit(function() {
-		const sideOne = parseInt($('#sideOne').val());
-		const sideTwo = parseInt($('#sideTwo').val());
-    const sideThree = parseInt($('#sideThree').val());
+export function Triangle(side1, side2, side3) {
+	this.side1 = side1;
+	this.side2 = side2;
+	this.side3 = side3;
+}
 
-        
-    const sumOfFirstTwo = sideOne + sideTwo;
-    const sumOfLastTwo = sideTwo + sideThree;
-    const sumOfFirstLast = sideOne + sideThree;
-    const sumOfSides = sideOne + sideTwo + sideThree;
-
-
-    if (sumOfFirstTwo <= sideThree || sumOfLastTwo <= sideOne || sumOfFirstLast <= sideTwo){
-      alert('not a triangle');
-    } else if ((sideOne === sideTwo) && (sideOne === sideThree)) 
-    {
-      alert('equilateral');
-    } else if((sideOne / sideTwo === 1 || sideTwo / sideThree === 1 || sideOne / sideThree === 1)){
-      alert('isosceles triangle')
-    } else {
-        alert('scalene triangle')
-      }
-
-    
-    
-
-		event.preventDefault();
-	});
-});
+Triangle.prototype.checkType = function() {
+	if (
+		this.side1 > this.side2 + this.side3 ||
+		this.side2 > this.side1 + this.side3 ||
+		this.side3 > this.side1 + this.side2
+	) {
+		return 'not a triangle';
+	} else if (this.side1 === this.side2 && this.side2 === this.side3) {
+		return 'it is an equilateral triangle';
+	} else if (this.side1 === this.side2 || this.side1 === this.side3 || this.side2 === this.side3) {
+		return 'it is an isosceles triangle';
+	} else if (this.side1 !== this.side2 && this.side1 !== this.side3 && this.side2 !== this.side3) {
+		return 'it is a scalene triangle';
+	} else {
+		return 'whatt';
+	}
+};
